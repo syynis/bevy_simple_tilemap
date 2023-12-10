@@ -25,6 +25,7 @@ bitflags! {
     pub struct TileFlags: u32 {
         const FLIP_X = 1 << 0;
         const FLIP_Y = 1 << 1;
+        const FLIP_D = 1 << 2;
     }
 }
 

@@ -164,6 +164,10 @@ pub fn queue_tilemaps(
 
                             let mut uvs = QUAD_UVS;
 
+                            if tile.flags.contains(TileFlags::FLIP_D) {
+                                uvs = [uvs[2], uvs[1], uvs[0], uvs[3]];
+                            }
+
                             if tile.flags.contains(TileFlags::FLIP_X) {
                                 uvs = [uvs[1], uvs[0], uvs[3], uvs[2]];
                             }
